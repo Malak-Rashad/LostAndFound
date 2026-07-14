@@ -31,8 +31,21 @@
                     <li class="nav-item"><a class="nav-link @active("Claims")" href="@Url.Action("Index", "Claims")"><i class="fas fa-hand-holding me-1"></i> مطالباتي</a></li>
                 </ul>
                 <div class="d-flex align-items-center gap-2">
-                    <a href="@Url.Action("Profile", "Users")" class="btn btn-outline-light btn-sm"><i class="fas fa-user me-1"></i> حسابي</a>
-                    <a href="@Url.Action("Create", "Items")" class="btn btn-post"><i class="fas fa-plus me-1"></i> أضف بلاغ</a>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        <a href="@Url.Action("Profile", "Users")" class="btn btn-outline-light btn-sm"><i class="fas fa-user me-1"></i> حسابي</a>
+                        <a href="@Url.Action("Create", "Items")" class="btn btn-post"><i class="fas fa-plus me-1"></i> أضف بلاغ</a>
+                        <form asp-controller="Auth" asp-action="Logout" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-sm" style="background:rgba(255,255,255,0.1);color:#fff;border:1px solid rgba(255,255,255,0.3)">
+                                <i class="fas fa-sign-out-alt me-1"></i> تسجيل خروج
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Login", "Auth")" class="btn btn-outline-light btn-sm"><i class="fas fa-sign-in-alt me-1"></i> تسجيل الدخول</a>
+                        <a href="@Url.Action("Register", "Auth")" class="btn btn-post"><i class="fas fa-user-plus me-1"></i> إنشاء حساب</a>
+                    }
                 </div>
             </div>
         </div>

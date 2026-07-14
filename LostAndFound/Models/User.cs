@@ -11,6 +11,10 @@ namespace LostAndFound.Models
         public string FullName { get; set; } = string.Empty;
 
         public string Phone { get; set; } = string.Empty;
+        public City? City { get; set; }
+        public string? AvatarBase64 { get; set; }
+        public bool ShowPhone { get; set; } = true;
+        public bool ShowEmail { get; set; } = true;
 
         public bool IsVerified { get; set; }
         public DateTime CreatedAt { get; set; } = DateTime.Now;
