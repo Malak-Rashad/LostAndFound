@@ -51,6 +51,9 @@ Egypt has high daily movement through public transportation, universities, malls
 - **User moderation** — admins can ban/unban accounts; banned users' content is hidden and they're blocked from signing back in.
 - **Excel export** — admins can export all reports to a formatted `.xlsx` workbook for offline record-keeping.
 
+**Live Demo:**
+🔗 https://malakrashad-001-site1.jtempurl.com
+
 ## Tech Stack
 
 | Layer | Technology |
@@ -185,4 +188,9 @@ Real-time chat additionally uses a SignalR hub at `/chatHub` (see `Hubs/ChatHub.
 
 ## Executable Files & Deployment
 
-There's currently no packaged executable or hosted deployment for this project — it runs from source via `dotnet run`, following the steps above. This section will be updated with a deployment link (or a `dotnet publish` build guide) once one is available.
+La2eet is deployed and available online.
+
+**Live Demo:**
+🔗 https://malakrashad-001-site1.jtempurl.com
+
+📍 La2eet — Helping Lost Items Find Their Way Home.
